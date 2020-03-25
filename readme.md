@@ -1,62 +1,64 @@
-0. Vizwiz
+# VizWiz
 
-   - understand the time
+- Challenge: https://vizwiz.org/workshops/2020-workshop/
 
-     - February: challenge submissions announced
-     - Friday, April 24 [5:59pm Central Standard Time]: extended abstracts due
-     - Monday, May 4 [5:59pm Central Standard Time]: notification to authors about decisions for extended abstracts
-     - Friday, May 15 [5:59pm Central Standard Time]: challenge submissions due
-     - Sunday, June 14: all-day workshop
+- Timeline
 
-   - understand the data
+  - February: challenge submissions announced
+  - Friday, April 24 [5:59pm Central Standard Time]: extended abstracts due
+  - Monday, May 4 [5:59pm Central Standard Time]: notification to authors about decisions for extended abstracts
+  - Friday, May 15 [5:59pm Central Standard Time]: challenge submissions due
+  - Sunday, June 14: all-day workshop
 
-     [official paper](https://arxiv.org/pdf/2002.08565.pdf)
+- Data
 
-   - understand the evaluation
+  [official paper](https://arxiv.org/pdf/2002.08565.pdf)
 
-     [CIDEr](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Vedantam_CIDEr_Consensus-Based_Image_2015_CVPR_paper.pdf)
+  [coco dataset](http://cocodataset.org/#download) (external)
 
-     
+  [conceptual captions dataset](https://github.com/google-research-datasets/conceptual-captions) (external)
 
-1. Read papers, what are the current state-of-the-art
+- Evaluation
 
-   - related researches
+  [CideR (evaluation metric)](https://github.com/vrama91/cider), [paper](https://arxiv.org/abs/1411.5726).
 
-     [Deep Visual-Semantic Alignments](https://cs.stanford.edu/people/karpathy/cvpr2015.pdf)
+- Paper (WIP)
 
-     https://ai.googleblog.com/2016/09/show-and-tell-image-captioning-open.html
+  [Show, attend, and tell](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning): ResNet + LSTM. [Replace LSTM with BERT](https://github.com/ajamjoom/Image-Captions).
 
-     https://github.com/karpathy/neuraltalk2
+  - [x] Tried
+  - [x] **Training**
 
-     [Baby talk](http://www.tamaraberg.com/papers/generation_cvpr11.pdf)
+  [Vilbert Multi Task](https://github.com/facebookresearch/vilbert-multi-task): This can be a candidate to improve the model structure, it proposes a novel co-attention layer. Need to think how it can be leveraged for captioning task. [paper](https://arxiv.org/abs/1908.02265)
 
-     [Midge](https://www.aclweb.org/anthology/W12-1523.pdf)
+  - [x] Feature detection part ran successfully
+  - [ ] Training on Downstream Task TBD
 
-- past winners - past tasks are different - visual question answering 
+  [Bottom-up-attention](https://github.com/peteanderson80/bottom-up-attention): Genome attribute CNN + bi-LSTM. This makes the most intuition sense to me, but the code is hard to get working. [paper](https://arxiv.org/abs/1707.07998)
 
-  [Bilinear attention networks](https://bi.snu.ac.kr/Publications/Conferences/International/ECCV2018_Workshop_VizWiz_JHKim.pdf)
+  - [ ] NOT WORK YET, it uses an old version of Caffe, which requires very patient and dedication to compile it to work. Spent a day on it, feel I was close, can still try it if want.
 
-  [Contextualized Bilinear Attention](https://bi.snu.ac.kr/Publications/Conferences/International/ECCV2018_Workshop_VizWiz_GCKang.pdf)
+  [Bottom-up-features](https://github.com/leyuan/bottom-up-features): A simplified version of the above, does not have the attribute classes of the Genome data set.
+
+  - [x] Tried
 
   
 
-- available models
+- Other Paper
 
-- hardware requirement
+  [Deep Visual-Semantic Alignments](https://cs.stanford.edu/people/karpathy/cvpr2015.pdf)
 
-1. Formulate a plan
-   - baseline system
-   - existing solution
-     - https://github.com/karpathy/neuraltalk2
-     - https://ai.googleblog.com/2016/09/show-and-tell-image-captioning-open.html
-   - new solution
-   - external data resource
-2. Result generating
+  https://ai.googleblog.com/2016/09/show-and-tell-image-captioning-open.html
+
+  https://github.com/karpathy/neuraltalk2
+
+  [Baby talk](http://www.tamaraberg.com/papers/generation_cvpr11.pdf)
+
+  [Midge](https://www.aclweb.org/anthology/W12-1523.pdf)
+
+  https://www.cs.cmu.edu/~afarhadi/papers/Attributes.pdf
+
+  https://papers.nips.cc/paper/9293-image-captioning-transforming-objects-into-words.pdf
 
 
 
-
-
-- slack
-- share doc
-- github repo
